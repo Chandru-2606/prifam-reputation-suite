@@ -29,16 +29,16 @@ const adminMenuItems = [
   { title: "Dashboard", url: "/dashboard", icon: Home },
   { title: "Reviews", url: "/reviews", icon: FileText },
   { title: "Upload", url: "/upload", icon: Upload },
+  { title: "User Management", url: "/user-management", icon: Users },
   { title: "Site Configuration", url: "/configuration", icon: Cog },
-  { title: "Reports", url: "/reports", icon: BarChart3 },
   { title: "Settings", url: "/settings", icon: Settings },
 ];
 
 const superAdminMenuItems = [
   { title: "Dashboard", url: "/super-admin", icon: Home },
   { title: "Admin Management", url: "/admin-management", icon: Users },
+  { title: "User Management", url: "/user-management", icon: Users },
   { title: "Site Configuration", url: "/configuration", icon: Cog },
-  { title: "Reports", url: "/reports", icon: BarChart3 },
   { title: "Settings", url: "/settings", icon: Settings },
 ];
 

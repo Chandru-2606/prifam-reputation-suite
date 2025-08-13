@@ -176,7 +176,7 @@ export default function Dashboard() {
             <CardHeader>
               <CardTitle>Reviews Trend</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="pt-6">
               <ReviewsChart data={mockReviewsData} />
             </CardContent>
           </Card>
@@ -185,7 +185,7 @@ export default function Dashboard() {
             <CardHeader>
               <CardTitle>Sentiment Analysis</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="pt-6">
               <SentimentChart data={mockSentimentData} />
             </CardContent>
           </Card>
@@ -194,57 +194,12 @@ export default function Dashboard() {
             <CardHeader>
               <CardTitle>Platform Distribution</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="pt-6">
               <PlatformChart data={mockPlatformData} />
             </CardContent>
           </Card>
         </div>
 
-        {/* Recent Reviews Table */}
-        <Card className="card-hover">
-          <CardHeader>
-            <CardTitle>Recent Reviews</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead>
-                  <tr className="border-b border-border">
-                    <th className="text-left p-4 font-medium text-muted-foreground">Review Text</th>
-                    <th className="text-left p-4 font-medium text-muted-foreground">Category</th>
-                    <th className="text-left p-4 font-medium text-muted-foreground">Rating</th>
-                    <th className="text-left p-4 font-medium text-muted-foreground">Sentiment</th>
-                    <th className="text-left p-4 font-medium text-muted-foreground">Actions</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {mockRecentReviews.map((review) => (
-                    <tr key={review.id} className="border-b border-border/50 hover:bg-muted/30">
-                      <td className="p-4 max-w-sm">
-                        <p className="truncate text-foreground">{review.text}</p>
-                        <p className="text-xs text-muted-foreground mt-1">{review.date}</p>
-                      </td>
-                      <td className="p-4">
-                        <Badge variant="outline">{review.category}</Badge>
-                      </td>
-                      <td className="p-4">
-                        <StarRating rating={review.rating} />
-                      </td>
-                      <td className="p-4">
-                        <SentimentBadge sentiment={review.sentiment} />
-                      </td>
-                      <td className="p-4">
-                        <Button variant="outline" size="sm">
-                          View Response
-                        </Button>
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </CardContent>
-        </Card>
       </div>
     </AppLayout>
   );

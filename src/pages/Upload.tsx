@@ -48,7 +48,8 @@ export default function Upload() {
   const [manualReview, setManualReview] = useState({
     text: "",
     category: "",
-    rating: 0
+    rating: 0,
+    customerName: ""
   });
   const [analysisResult, setAnalysisResult] = useState<{
     sentiment: string;
@@ -216,6 +217,16 @@ export default function Upload() {
             </CardHeader>
             <CardContent className="space-y-6">
               <div className="space-y-4">
+                <div>
+                  <Label htmlFor="customer-name">Customer Name or Email</Label>
+                  <Input
+                    id="customer-name"
+                    placeholder="Enter customer name or email (optional)"
+                    value={manualReview.customerName || ""}
+                    onChange={(e) => setManualReview(prev => ({ ...prev, customerName: e.target.value }))}
+                  />
+                </div>
+
                 <div>
                   <Label htmlFor="review-text">Review Text</Label>
                   <Textarea

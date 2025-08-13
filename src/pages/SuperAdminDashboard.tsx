@@ -168,7 +168,7 @@ export default function SuperAdminDashboard() {
             <CardHeader>
               <CardTitle>System-wide Reviews</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="pt-6">
               <ReviewsChart data={mockReviewsData} />
             </CardContent>
           </Card>
@@ -177,7 +177,7 @@ export default function SuperAdminDashboard() {
             <CardHeader>
               <CardTitle>Overall Sentiment</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="pt-6">
               <SentimentChart data={mockSentimentData} />
             </CardContent>
           </Card>
@@ -186,7 +186,7 @@ export default function SuperAdminDashboard() {
             <CardHeader>
               <CardTitle>Platform Usage</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="pt-6">
               <PlatformChart data={mockPlatformData} />
             </CardContent>
           </Card>
