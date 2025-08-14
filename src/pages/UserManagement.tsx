@@ -112,6 +112,7 @@ const RoleBadge = ({ role }: { role: string }) => {
 };
 
 export default function UserManagement() {
+  console.log("UserManagement component loaded");
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   const [filterRole, setFilterRole] = useState("");

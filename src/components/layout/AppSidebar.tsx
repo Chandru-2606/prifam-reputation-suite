@@ -81,10 +81,14 @@ export function AppSidebar({ userRole }: AppSidebarProps) {
               {menuItems.map((item) => (
                 <SidebarMenuItem key={item.title}>
                   <SidebarMenuButton asChild>
-                    <NavLink to={item.url} className={getNavCls}>
-                      <item.icon className="h-4 w-4" />
-                      {!isCollapsed && <span>{item.title}</span>}
-                    </NavLink>
+                     <NavLink 
+                       to={item.url} 
+                       className={getNavCls}
+                       onClick={() => console.log("Navigating to:", item.url, item.title)}
+                     >
+                       <item.icon className="h-4 w-4" />
+                       {!isCollapsed && <span>{item.title}</span>}
+                     </NavLink>
                   </SidebarMenuButton>
                 </SidebarMenuItem>
               ))}
