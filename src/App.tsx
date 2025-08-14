@@ -25,7 +25,6 @@ const App = () => (
           <Route path="/" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/super-admin" element={<SuperAdminDashboard />} />
-          <Route path="/reviews" element={<Reviews />} />
           <Route path="/upload" element={<Upload />} />
           <Route path="/configuration" element={<Configuration />} />
           <Route path="/user-management" element={<UserManagement />} />

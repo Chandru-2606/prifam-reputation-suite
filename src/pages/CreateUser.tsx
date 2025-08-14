@@ -143,7 +143,6 @@ export default function CreateUser() {
                       <SelectValue placeholder="Select user role" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="Super Admin">Super Admin</SelectItem>
                       <SelectItem value="Admin">Admin</SelectItem>
                       <SelectItem value="Agent">Agent</SelectItem>
                       <SelectItem value="Viewer">Viewer</SelectItem>
@@ -205,13 +204,6 @@ export default function CreateUser() {
           <CardContent>
             <div className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="p-4 border border-border rounded-lg">
-                  <h4 className="font-medium text-foreground mb-2">Super Admin</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Full system access, can manage all users and settings
-                  </p>
-                </div>
-                
                 <div className="p-4 border border-border rounded-lg">
                   <h4 className="font-medium text-foreground mb-2">Admin</h4>
                   <p className="text-sm text-muted-foreground">

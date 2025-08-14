@@ -5,7 +5,7 @@ import { AppSidebar } from "./AppSidebar";
 
 interface AppLayoutProps {
   children: ReactNode;
-  userRole?: "super-admin" | "admin";
+  userRole?: "admin";
 }
 
 export function AppLayout({ children, userRole = "admin" }: AppLayoutProps) {

@@ -22,23 +22,14 @@ import {
 } from "@/components/ui/sidebar";
 
 interface AppSidebarProps {
-  userRole: "super-admin" | "admin";
+  userRole: "admin";
 }
 
 const adminMenuItems = [
   { title: "Dashboard", url: "/dashboard", icon: Home },
-  { title: "Reviews", url: "/reviews", icon: FileText },
-  { title: "Upload", url: "/upload", icon: Upload },
-  { title: "User Management", url: "/user-management", icon: Users },
+  { title: "Upload Reviews", url: "/upload", icon: Upload },
   { title: "Site Configuration", url: "/configuration", icon: Cog },
-  { title: "Settings", url: "/settings", icon: Settings },
-];
-
-const superAdminMenuItems = [
-  { title: "Dashboard", url: "/super-admin", icon: Home },
-  { title: "Admin Management", url: "/admin-management", icon: Users },
   { title: "User Management", url: "/user-management", icon: Users },
-  { title: "Site Configuration", url: "/configuration", icon: Cog },
   { title: "Settings", url: "/settings", icon: Settings },
 ];
 
@@ -47,7 +38,7 @@ export function AppSidebar({ userRole }: AppSidebarProps) {
   const location = useLocation();
   const currentPath = location.pathname;
 
-  const menuItems = userRole === "super-admin" ? superAdminMenuItems : adminMenuItems;
+  const menuItems = adminMenuItems;
   const isCollapsed = state === "collapsed";
   
   const isActive = (path: string) => currentPath === path;
@@ -74,7 +65,7 @@ export function AppSidebar({ userRole }: AppSidebarProps) {
 
         <SidebarGroup>
           <SidebarGroupLabel className="text-xs font-medium text-muted-foreground px-6 py-2">
-            {userRole === "super-admin" ? "Super Admin" : "Main"}
+            Main
           </SidebarGroupLabel>
           <SidebarGroupContent>
             <SidebarMenu>

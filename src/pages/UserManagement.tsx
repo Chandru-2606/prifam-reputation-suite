@@ -69,7 +69,7 @@ const mockUsers = [
     id: 4,
     name: "Emily Davis",
     email: "emily.davis@company.com",
-    role: "Super Admin",
+    role: "Admin",
     status: "active",
     createdDate: "2024-01-01",
     lastLogin: "2024-01-20"
@@ -98,7 +98,6 @@ const StatusBadge = ({ status }: { status: string }) => (
 
 const RoleBadge = ({ role }: { role: string }) => {
   const roleColors = {
-    "Super Admin": "bg-destructive/10 text-destructive border-destructive/20",
     "Admin": "bg-primary/10 text-primary border-primary/20",
     "Agent": "bg-secondary/10 text-secondary-foreground border-secondary/20",
     "Viewer": "bg-muted text-muted-foreground border-border"
@@ -166,10 +165,9 @@ export default function UserManagement() {
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="all">All Roles</SelectItem>
-                    <SelectItem value="Super Admin">Super Admin</SelectItem>
-                    <SelectItem value="Admin">Admin</SelectItem>
-                    <SelectItem value="Agent">Agent</SelectItem>
-                    <SelectItem value="Viewer">Viewer</SelectItem>
+                      <SelectItem value="Admin">Admin</SelectItem>
+                      <SelectItem value="Agent">Agent</SelectItem>
+                      <SelectItem value="Viewer">Viewer</SelectItem>
                   </SelectContent>
                 </Select>
 

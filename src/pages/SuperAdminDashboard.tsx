@@ -116,7 +116,7 @@ const StatusBadge = ({ status }: { status: string }) => (
 
 export default function SuperAdminDashboard() {
   return (
-    <AppLayout userRole="super-admin">
+    <AppLayout userRole="admin">
       <div className="space-y-8">
         {/* Header */}
         <div className="flex justify-between items-center">
