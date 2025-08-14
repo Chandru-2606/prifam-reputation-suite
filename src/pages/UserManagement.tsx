@@ -121,8 +121,8 @@ export default function UserManagement() {
   const filteredUsers = mockUsers.filter(user => {
     const matchesSearch = user.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          user.email.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesRole = !filterRole || user.role === filterRole;
-    const matchesStatus = !filterStatus || user.status === filterStatus;
+    const matchesRole = !filterRole || filterRole === "all" || user.role === filterRole;
+    const matchesStatus = !filterStatus || filterStatus === "all" || user.status === filterStatus;
     
     return matchesSearch && matchesRole && matchesStatus;
   });
@@ -165,7 +165,7 @@ export default function UserManagement() {
                     <SelectValue placeholder="Filter by role" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">All Roles</SelectItem>
+                    <SelectItem value="all">All Roles</SelectItem>
                     <SelectItem value="Super Admin">Super Admin</SelectItem>
                     <SelectItem value="Admin">Admin</SelectItem>
                     <SelectItem value="Agent">Agent</SelectItem>
@@ -178,7 +178,7 @@ export default function UserManagement() {
                     <SelectValue placeholder="Filter by status" />
                   </SelectTrigger>
                   <SelectContent>
-                    <SelectItem value="">All Status</SelectItem>
+                    <SelectItem value="all">All Status</SelectItem>
                     <SelectItem value="active">Active</SelectItem>
                     <SelectItem value="inactive">Inactive</SelectItem>
                   </SelectContent>
